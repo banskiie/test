@@ -6,7 +6,7 @@ export type ContactFormState = {
   status: "idle" | "success" | "error"
   message: string
 }
-
+ 
 function buildEmailHtml(name: string, email: string, message: string): string {
   const submittedAt = new Date().toLocaleString("en-US", {
     weekday: "long",
