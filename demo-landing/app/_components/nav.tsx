@@ -1,7 +1,8 @@
 "use client"
 
+import Image from "next/image"
 import { useTheme } from "next-themes"
-import { Moon, Sun, Wind } from "lucide-react"
+import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const NAV_LINKS = [
@@ -14,15 +15,17 @@ export function Nav() {
   const { resolvedTheme, setTheme } = useTheme()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="#hero" className="flex items-center gap-2">
-          <div className="flex size-7 items-center justify-center rounded-md bg-primary">
-            <Wind className="size-4 text-primary-foreground" />
-          </div>
-          <span className="text-lg font-semibold tracking-tight">
-            Metro Coolaire
-          </span>
+        <a href="#hero" className="flex items-center">
+          <Image
+            src="/logo2.png"
+            alt="Metro Coolaire Trading Corporation"
+            width={180}
+            height={60}
+            className="mt-1 h-6 w-auto object-contain"
+            priority
+          />
         </a>
 
         <nav className="flex items-center gap-1">
@@ -35,20 +38,6 @@ export function Nav() {
               {label}
             </a>
           ))}
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="ml-2"
-            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-            aria-label="Toggle theme"
-          >
-            {resolvedTheme === "dark" ? (
-              <Sun className="size-4" />
-            ) : (
-              <Moon className="size-4" />
-            )}
-          </Button>
         </nav>
       </div>
     </header>

@@ -42,11 +42,11 @@ function buildEmailHtml(name: string, email: string, message: string): string {
 
           <!-- Brand header -->
           <tr>
-            <td style="background-color:#09090b;padding:24px 32px;">
-              <p style="margin:0;font-size:18px;font-weight:700;color:#ffffff;letter-spacing:-0.3px;">
+            <td style="background-color:#0675ca;padding:24px 32px;">
+              <p style="margin:0;font-size:19px;font-weight:700;color:#ffffff;letter-spacing:-0.3px;">
                 Metro Coolaire
               </p>
-              <p style="margin:4px 0 0;font-size:12px;color:#a1a1aa;font-style:italic;">
+              <p style="margin:4px 0 0;font-size:12px;color:#cce8f8;font-style:italic;">
                 Your air is our care.
               </p>
             </td>
@@ -101,7 +101,7 @@ function buildEmailHtml(name: string, email: string, message: string): string {
 
               <!-- Reply CTA -->
               <a href="mailto:${email}?subject=Re%3A%20Your%20enquiry"
-                 style="display:inline-block;background:#09090b;color:#ffffff;
+                 style="display:inline-block;background:#0675ca;color:#ffffff;
                         padding:11px 22px;border-radius:7px;font-size:14px;
                         font-weight:600;text-decoration:none;letter-spacing:-0.1px;">
                 Reply to ${name} &rarr;
